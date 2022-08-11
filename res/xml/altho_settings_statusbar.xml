@@ -23,18 +23,25 @@
         android:key="statusbar_category"
         android:title="@string/statusbar_title">
         
-        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        <com.altho.settings.custom.preferences.SystemSettingSwitchPreference
             android:key="less_boring_heads_up"
             android:title="@string/less_boring_heads_up_title"
             android:summary="@string/less_boring_heads_up_summary"
             android:defaultValue="false" /> 
+    
+        <com.altho.settings.custom.preferences.SystemSettingSwitchPreference
+            android:key="statusbar_colored_icons"
+            android:title="@string/statusbar_colored_icons_title"
+            android:summary="@string/statusbar_colored_icons_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
     
     <PreferenceCategory
         android:key="notification_category"
         android:title="@string/notifications_title">
         
-        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        <com.altho.settings.custom.preferences.SystemSettingSwitchPreference
             android:key="qs_show_battery_estimate"
             android:title="@string/qs_show_battery_estimate_title"
             android:summary="@string/qs_show_battery_estimate_summary"
