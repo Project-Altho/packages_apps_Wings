@@ -35,6 +35,15 @@
             android:summary="@string/statusbar_colored_icons_summary"
             android:defaultValue="false" />
 
+        <com.altho.settings.custom.preferences.SystemSettingSeekBarPreference
+            android:key="qs_transparency"
+            android:title="@string/qs_transparency_title"
+            android:summary="@string/qs_transparency_summary"
+            android:defaultValue="10"
+            settings:interval="1"
+            android:max="10"         
+            android:min="1" />
+
     </PreferenceCategory>
     
     <PreferenceCategory
@@ -46,6 +55,5 @@
             android:title="@string/qs_show_battery_estimate_title"
             android:summary="@string/qs_show_battery_estimate_summary"
             android:defaultValue="true"/>
-    </PreferenceCategory>        
-        
+    </PreferenceCategory>          
 </PreferenceScreen>
