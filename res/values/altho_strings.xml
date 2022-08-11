@@ -129,16 +129,7 @@
     <string name="network_traffic_download">Download</string>
     <string name="network_traffic_upload">Upload</string>
     
-    <!-- Heads up snooze -->
-    <string name="heads_up_snooze_title">Snooze timer</string>
-    <string name="heads_up_snooze_summary_one_minute">Swiping up on peeking notifications will snooze heads up from that application for 1 minute</string>
-    <string name="heads_up_snooze_summary">Swiping up on peeking notifications will snooze heads up from that application for <xliff:g id="number">%d</xliff:g> minutes</string>
-    <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
-    <string name="heads_up_snooze_1min">1 minute</string>
-    <string name="heads_up_snooze_5min">5 minutes</string>
-    <string name="heads_up_snooze_10min">10 minutes</string>
-    <string name="heads_up_snooze_15min">15 minutes</string>
-    <string name="heads_up_snooze_20min">20 minutes</string>
+  
     
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Time out</string>
@@ -157,6 +148,11 @@
     <!-- QS battery estimates -->
     <string name="qs_show_battery_estimate_title">Battery estimates</string>
     <string name="qs_show_battery_estimate_summary">Show estimated remaining battery life next to the icon</string>
+
+    <!-- Media art -->
+    <string name="lockscreen_media_category">Lock screen media</string>
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
     
     <!-- Lockscreen album art filter -->
     <string name="lockscreen_albumart_filter_title">Media cover art filter</string>
@@ -165,4 +161,9 @@
     <string name="lockscreen_albumart_filter_tint">Accent tinted</string>
     <string name="lockscreen_albumart_filter_blur">Blur</string>
     <string name="lockscreen_albumart_filter_grayblur">Grayscale and blurred</string>
+  
+    <!-- Status Bar Lyric -->
+    <string name="status_bar_show_lyric_title">Status bar lyric feature</string>
+    <string name="status_bar_show_lyric_summary">Show lyrics in status bar (requires app support and a SystemUI restart)</string>
+
 </resources>

@@ -39,14 +39,14 @@
             android:fragment="com.altho.settings.fragments.QuickSettings"
             android:icon="@drawable/ic_settings_quicksettings"/>
 
-        <!-- Navigation Bar -->
+        <!-- Notification Bar -->
         <Preference
-            android:key="navigationbar_category"
-			settings:layout="@layout/fire_card_accent_bottom"
-            android:title="@string/navbar_title"
-            android:fragment="com.altho.settings.fragments.NavigationBarSettings"
+            android:key="notifications_category"
+	    settings:layout="@layout/fire_card_accent_bottom"
+            android:title="@string/notifications_title"
+            android:fragment="com.altho.settings.fragments.NotificationsSettings"
             android:icon="@drawable/ic_settings_navbar"/>
-
+            
         <!-- Devider -->
 		<Preference
 		    android:key="altho_homepage_category"

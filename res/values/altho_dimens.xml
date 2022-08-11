@@ -24,6 +24,6 @@
     <dimen name="picker_circle_preview_size">26dp</dimen>
 
      <!-- Cards -->
-    <dimen name="altho_rc_radius">16dp</dimen>
+    <dimen name="fire_rc_radius">16dp</dimen>
 	
 </resources>

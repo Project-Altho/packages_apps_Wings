@@ -21,7 +21,7 @@
     
     <PreferenceCategory
         android:key="statusbar_category"
-        android:title="@string/status_bar_category">
+        android:title="@string/statusbar_title">
         
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="less_boring_heads_up"
@@ -31,8 +31,8 @@
     </PreferenceCategory>
     
     <PreferenceCategory
-        android:key="qs_category"
-        android:title="@string/qs_category">
+        android:key="notification_category"
+        android:title="@string/notifications_title">
         
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="qs_show_battery_estimate"
