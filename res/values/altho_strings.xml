@@ -177,4 +177,8 @@
     <!-- Lockscreen Clock -->
     <string name="lockscreen_small_clock_title">Small clock</string>
     <string name="lockscreen_small_clock_summary">Force small clock on lockscreen even if notifications are absent</string>
+
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
+    <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader in power menu</string>
 </resources>
