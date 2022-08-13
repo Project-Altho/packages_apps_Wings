@@ -15,12 +15,33 @@
  */
 package com.altho.settings.fragments;
 
+import android.content.Context;
+import android.content.ContentResolver;
+import android.content.Intent;
+import android.content.pm.UserInfo;
+import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
+import android.provider.Settings;
+import com.android.settings.R;
+import androidx.annotation.NonNull;
+
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.SettingsPreferenceFragment;
 
 import android.os.Bundle;
 import com.android.settings.R;
 
-import com.android.settings.SettingsPreferenceFragment;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class PowerMenuSettings extends SettingsPreferenceFragment {
 
@@ -28,7 +49,18 @@ public class PowerMenuSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.altho_settings_power);
+        addPreferencesFromResource(R.xml.powermenu_settings);
+
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+
+        return false;
+    }
     }
 
     @Override
