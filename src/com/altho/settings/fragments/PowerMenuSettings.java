@@ -43,7 +43,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class PowerMenuSettings extends SettingsPreferenceFragment {
+public class PowerMenuSettings extends SettingsPreferenceFragment
+                   implements Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -60,7 +61,6 @@ public class PowerMenuSettings extends SettingsPreferenceFragment {
     public boolean onPreferenceChange(Preference preference, Object newValue) {
 
         return false;
-    }
     }
 
     @Override

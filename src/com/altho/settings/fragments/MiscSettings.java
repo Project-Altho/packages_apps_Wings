@@ -17,6 +17,10 @@ package com.altho.settings.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import android.content.ContentResolver;
+import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+
 import android.os.Bundle;
 import com.android.settings.R;
 
@@ -39,7 +43,8 @@ import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import com.altho.settings.preferences.SystemSettingSwitchPreference;
 
-public class MiscSettings extends SettingsPreferenceFragment {
+public class MiscSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String FINGERPRINT_SUCCESS_VIB = "fingerprint_success_vib";
     private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
@@ -58,14 +63,17 @@ public class MiscSettings extends SettingsPreferenceFragment {
         final PreferenceScreen prefSet = getPreferenceScreen();
         final PackageManager mPm = getActivity().getPackageManager();
 
-        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        final PreferenceCategory fpCategory = (PreferenceCategory)
+                findPreference("lockscreen_ui_finterprint_category");
+
+        mFingerprintManager = (FingerprintManager)
+                getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintSuccessVib = findPreference(FINGERPRINT_SUCCESS_VIB);
         mFingerprintErrorVib = findPreference(FINGERPRINT_ERROR_VIB);
         if (mPm.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT) &&
                  mFingerprintManager != null) {
             if (!mFingerprintManager.isHardwareDetected()){
-                prefSet.removePreference(mFingerprintSuccessVib);
-                prefSet.removePreference(mFingerprintErrorVib);
+                prefSet.removePreference(fpCategory);
             } else {
                 mFingerprintSuccessVib.setChecked((Settings.System.getInt(getContentResolver(),
                         Settings.System.FP_SUCCESS_VIBRATE, 1) == 1));
@@ -75,8 +83,7 @@ public class MiscSettings extends SettingsPreferenceFragment {
                 mFingerprintErrorVib.setOnPreferenceChangeListener(this);
             }
         } else {
-            prefSet.removePreference(mFingerprintSuccessVib);
-            prefSet.removePreference(mFingerprintErrorVib);
+            prefSet.removePreference(fpCategory);
         }
     }
 
