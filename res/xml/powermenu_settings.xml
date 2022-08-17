@@ -31,7 +31,7 @@
             android:title="@string/powermenu_advanced"
             android:defaultValue="true" />
 
-         <com.altho.settings.preferences.SystemSettingSwitchPreference
+ <!--         <com.altho.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_screenshot"
             android:title="@string/powermenu_screenshot"
             android:defaultValue="false" />
@@ -40,17 +40,17 @@
             android:key="powermenu_settings"
             android:title="@string/powermenu_settings"
             android:defaultValue="false" />
-
+<!--
          <com.altho.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_lockdown"
             android:title="@string/powermenu_lockdown"
             android:defaultValue="false" />
-
+-->
          <com.altho.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_emergency"
             android:title="@string/powermenu_emergency"
             android:defaultValue="false" />
-
+<!--
          <com.altho.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_users"
             android:title="@string/powermenu_users"
@@ -61,5 +61,5 @@
             android:title="@string/powermenu_logout"
             android:defaultValue="false" />
 
-
+-->
 </PreferenceScreen>
