@@ -17,8 +17,8 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/altho_settings_title" >
 
-    <!-- Altho logo -->
-    <Preference
+    <!-- Flexo logo -->
+    <com.android.settingslib.widget.LayoutPreference
         android:key="fire_logo"
         android:layout="@layout/fire_logo"
         android:selectable="false"/>
@@ -45,7 +45,7 @@
 	    settings:layout="@layout/fire_card_accent_bottom"
             android:title="@string/notifications_title"
             android:fragment="com.altho.settings.fragments.NotificationsSettings"
-            android:icon="@drawable/ic_settings_navbar"/>
+            android:icon="@drawable/ic_settings_notifications"/>
             
         <!-- Devider -->
 		<Preference

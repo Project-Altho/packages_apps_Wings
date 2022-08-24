@@ -1,41 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2017-2019 The PixelDust Project
-
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
          http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24.000000dp"
-    android:height="24.000000dp"
-    android:viewportWidth="24.000000"
-    android:viewportHeight="24.000000">
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
 
-    <group
-            android:translateY="24.000000"
-            android:scaleX="0.100000"
-            android:scaleY="-0.100000">
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M133 204 c36 -19 34 -62 -3 -81 -24 -12 -24 -13 -3 -13 22 0 53 33 53 57 0 19 -37 53 -57 53 -13 -1 -10 -5 10 -16z" />
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M112 173 c2 -9 8 -18 15 -20 7 -3 9 3 6 16 -6 25 -26 28 -21 4z" />
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M0 55 l0 -35 120 0 120 0 0 35 0 35 -120 0 -120 0 0 -35z m40 13 c0 -7 -4 -19 -9 -27 -11 -17 -25 3 -17 24 7 18 26 20 26 3z m21 -31 c-8 -8 -11 -5 -11 9 0 27 14 41 18 19 2 -9 -1 -22 -7 -28z m43 21 c-8 -28 -12 -33 -20 -25 -9 8 6 47 17 47 6 0 7 -10 3 -22z m36 -3 c0 -14 -4 -25 -10 -25 -11 0 -14 33 -3 43 11 11 13 8 13 -18z m85 0 c0 -15 -8 -21 -32 -23 -30 -3 -33 -1 -33 23 0 24 3 26 33 23 24 -2 32 -8 32 -23z" />
-    </group>
+    <path
+        android:fillColor="?android:attr/colorControlNormal"
+        android:pathData="M18,20H6V8h12V20Z
+M18,2H6C4.9,2,4,2.9,4,4v16c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V4C20,2.9,19.1,2,18,2L18,2z" />
 </vector>

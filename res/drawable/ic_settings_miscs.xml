@@ -1,57 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2017-2019 The PixelDust Project
-
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
          http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24.000000dp"
-    android:height="24.000000dp"
-    android:viewportWidth="24.000000"
-    android:viewportHeight="24.000000">
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
 
-    <group
-            android:translateY="24.000000"
-            android:scaleX="0.100000"
-            android:scaleY="-0.100000">
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M67 218 l-38 -20 3 -96 3 -97 85 0 85 0 3 96 3 97 -44 21 c-50 24 -50 24 -100 -1z m76 -2 c26 -20 21 -26 -23 -26 -22 0 -40 3 -40 6 0 7 32 33 40 33 3 0 13 -6 23 -13z m-73 -26 c0 -5 23 -10 50 -10 28 0 50 5 50 10 0 6 7 10 15 10 12 0 15 -17 15 -95 l0 -95 -80 0 -80 0 0 95 c0 78 3 95 15 95 8 0 15 -4 15 -10z" />
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M85 150 c-4 -6 -11 -8 -16 -5 -5 4 -9 1 -9 -4 0 -16 16 -13 30 4 7 8 10 15 7 15 -3 0 -9 -5 -12 -10z" />
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M110 140 c0 -5 16 -10 35 -10 19 0 35 5 35 10 0 6 -16 10 -35 10 -19 0 -35 -4 -35 -10z" />
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M71 101 c-8 -5 -9 -11 -3 -15 5 -3 15 1 22 9 14 16 3 20 -19 6z" />
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M128 93 c12 -2 30 -2 40 0 9 3 -1 5 -23 4 -22 0 -30 -2 -17 -4z" />
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M85 60 c-4 -6 -11 -8 -16 -5 -5 4 -9 1 -9 -4 0 -16 16 -13 30 4 7 8 10 15 7 15 -3 0 -9 -5 -12 -10z" />
-        <path
-            android:fillColor="#000000"
-            android:strokeWidth="1"
-            android:pathData="M128 43 c12 -2 30 -2 40 0 9 3 -1 5 -23 4 -22 0 -30 -2 -17 -4z" />
-    </group>
+    <path
+        android:fillColor="?android:attr/colorControlNormal"
+        android:pathData="M19,4h-4L7.11,16.63 4.5,12 9,4H5L0.5,12 5,20h4l7.89,-12.63L19.5,12 15,20h4l4.5,-8z"/>
 </vector>
