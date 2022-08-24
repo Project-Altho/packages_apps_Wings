@@ -19,7 +19,7 @@
 
     <!-- Flexo logo -->
     <com.android.settingslib.widget.LayoutPreference
-        android:key="fire_logo"
+        android:key="flexo_logo"
         android:layout="@layout/fire_logo"
         android:selectable="false"/>
 
