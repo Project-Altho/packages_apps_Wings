@@ -19,12 +19,16 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
    
-    <com.altho.settings.preferences.SystemSettingListPreference
-        android:key="torch_power_button_gesture"
-        android:dialogTitle="@string/torch_power_button_gesture_title"
-        android:title="@string/torch_power_button_gesture_title"
-        android:summary="%s"
-        android:entries="@array/torch_power_button_gesture_entries"
-        android:entryValues="@array/torch_power_button_gesture_values"
-        android:defaultValue="0" />
+    <!-- Gaming mode -->
+    <Preference
+        android:key="gaming_mode"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary">
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="io.chaldeaprjkt.gamespace"
+            android:targetClass="io.chaldeaprjkt.gamespace.settings.SettingsActivity" />
+    </Preference>
+
 </PreferenceScreen>
