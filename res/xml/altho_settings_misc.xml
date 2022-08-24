@@ -29,7 +29,7 @@
         android:title="@string/lockscreen_small_clock_title"
         android:summary="@string/lockscreen_small_clock_summary"
         android:defaultValue="false" />
-
+<!--
     <com.altho.settings.preferences.SystemSettingSwitchPreference
         android:key="fingerprint_success_vib"
         android:title="@string/fprint_sucess_vib_title"
@@ -41,5 +41,5 @@
         android:title="@string/fprint_error_vib_title"
         android:summary="@string/fprint_error_vib_summary"
         android:persistent="true" />
-
+-->
 </PreferenceScreen>
