@@ -43,7 +43,7 @@ import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import com.altho.settings.preferences.SystemSettingSwitchPreference;
 
-public class MiscSettings extends SettingsPreferenceFragment
+public class MiscSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
