@@ -31,12 +31,12 @@
             android:fragment="com.altho.settings.fragments.QuickSettings"
             android:icon="@drawable/ic_settings_quicksettings"/>
 
-        <!-- Buttons -->
+        <!-- Buttons
         <Preference
             android:key="buttonsettings_category"
             android:title="@string/button_title"
             android:fragment="com.altho.settings.fragments.ButtonSettings"
-            android:icon="@drawable/ic_settings_buttons"/>
+            android:icon="@drawable/ic_settings_buttons"/ -->
 
         <!-- Navigation Bar -->
         <Preference
@@ -59,19 +59,19 @@
             android:fragment="com.altho.settings.fragments.LockScreenSettings"
             android:icon="@drawable/ic_settings_lockscreens"/>
 
-        <!-- Power Menu -->
+        <!-- Power Menu 
         <Preference
             android:key="powermenu_category"
             android:title="@string/powermenu_title"
             android:fragment="com.altho.settings.fragments.PowerMenuSettings"
-            android:icon="@drawable/ic_settings_powermenu"/>
+            android:icon="@drawable/ic_settings_powermenu"/
 
-        <!-- Recents -->
+         Recents 
         <Preference
             android:key="recents_category"
             android:title="@string/recents_title"
             android:fragment="com.altho.settings.fragments.RecentsSettings"
-            android:icon="@drawable/ic_settings_recents"/>
+            android:icon="@drawable/ic_settings_recents"/ -->
 
         <!-- Notifications -->
         <Preference
