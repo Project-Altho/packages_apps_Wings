@@ -48,6 +48,7 @@ import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.internal.logging.nano.MetricsProto;
 import com.altho.settings.preference.SecureSettingListPreference;
+import com.altho.settings.preference.SecureSettingListPreference;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -56,8 +57,12 @@ import java.util.List;
 public class QuickSettings extends SettingsPreferenceFragment {
 
     private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
+    private static final String KEY_STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+    private static final String KEY_STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
     private SecureSettingListPreference mStatusBarAmPm;
+    private SecureSettingListPreference mBatteryStyle;
+    private SystemSettingListPreference mShowPercentage;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -66,6 +71,11 @@ public class QuickSettings extends SettingsPreferenceFragment {
         PreferenceScreen prefSet = getPreferenceScreen();
 
         mStatusBarAmPm = findPreference(KEY_STATUS_BAR_AM_PM);
+
+        mBatteryStyle = findPreference(KEY_STATUS_BAR_BATTERY_STYLE);
+        mShowPercentage = findPreference(KEY_STATUS_BAR_SHOW_BATTERY_PERCENT);
+
+        mBatteryStyle.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -79,7 +89,39 @@ public class QuickSettings extends SettingsPreferenceFragment {
     }
 
     @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ((ListPreference)preference).setValue((String)newValue);
+        updateStates();
+        return false;
+    }
+
+    private void updateStates() {
+        if ("2".equals(mBatteryStyle.getValue()))
+            mShowPercentage.setEnabled(false);
+        else
+            mShowPercentage.setEnabled(true);
+    }
+
+    @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ALTHO;
     }
+
+    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+        new BaseSearchIndexProvider() {
+            @Override
+            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                    boolean enabled) {
+                final ArrayList<SearchIndexableResource> result = new ArrayList<>();
+                final SearchIndexableResource sir = new SearchIndexableResource(context);
+                sir.xmlResId = R.xml.altho_settings_quicksettings;
+                result.add(sir);
+                return result;
+            }
+            @Override
+            public List<String> getNonIndexableKeys(Context context) {
+                final List<String> keys = super.getNonIndexableKeys(context);
+                return keys;
+            }
+    };
 }
