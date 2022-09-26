@@ -31,6 +31,7 @@
     <string name="recents_title">Recents apps</string>
     <string name="statusbar_title">Status bar</string>
     <string name="volume_title">Volume Settings</string>
+    <string name="icons_category">Icons</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -138,5 +139,9 @@
     <!-- Custom Signal bar icons -->
     <string name="theme_customization_signal_icon_title">Signal icons</string>
     <string name="theme_customization_signal_icon_summary">Set signal icons style</string>
+
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G icon</string>
+    <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
 
 </resources>
