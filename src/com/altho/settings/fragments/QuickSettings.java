@@ -15,12 +15,21 @@
  */
 package com.altho.settings.fragments;
 
+import android.app.AlertDialog;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.content.ContentResolver;
+import android.content.res.Resources;
+import android.database.ContentObserver;
+import android.content.DialogInterface.OnCancelListener;
 import android.provider.SearchIndexableResource;
+import android.text.format.DateFormat;
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
 import android.provider.Settings;
 
 import androidx.preference.ListPreference;
@@ -32,19 +41,41 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
+import com.android.settings.search.BaseSearchIndexProvider;
 
+import com.android.settingslib.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
 import com.android.internal.logging.nano.MetricsProto;
+import com.altho.settings.preference.SecureSettingListPreference;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class QuickSettings extends SettingsPreferenceFragment {
+
+    private static final String KEY_STATUS_BAR_AM_PM = "status_bar_am_pm";
+
+    private SecureSettingListPreference mStatusBarAmPm;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.altho_settings_quicksettings);
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mStatusBarAmPm = findPreference(KEY_STATUS_BAR_AM_PM);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (DateFormat.is24HourFormat(requireContext())) {
+            mStatusBarAmPm.setEnabled(false);
+            mStatusBarAmPm.setSummary(R.string.status_bar_am_pm_unavailable);
+        }
     }
 
     @Override
